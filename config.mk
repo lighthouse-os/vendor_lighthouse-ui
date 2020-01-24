@@ -7,6 +7,11 @@ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/lighthouse-ui/overlay
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/lighthouse-ui/overlay/common/
 
+# Offline charger
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    product_charger_res_images
+	
 # Bootanimation
 ifeq ($(TARGET_BOOT_ANIMATION_RES),1080)
      PRODUCT_COPY_FILES += vendor/lighthouse-ui/bootanimation/bootanimation_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
